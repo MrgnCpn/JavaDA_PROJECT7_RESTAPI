@@ -34,6 +34,17 @@ public class RuleName {
     @Size(max = 125)
     private String sqlPart;
 
+    public RuleName() {}
+
+    public RuleName(@Size(max = 125) String name, @Size(max = 125) String description, @Size(max = 125) String json, @Size(max = 512) String template, @Size(max = 125) String sqlStr, @Size(max = 125) String sqlPart) {
+        this.name = name;
+        this.description = description;
+        this.json = json;
+        this.template = template;
+        this.sqlStr = sqlStr;
+        this.sqlPart = sqlPart;
+    }
+
     public Integer getId() {
         return id;
     }

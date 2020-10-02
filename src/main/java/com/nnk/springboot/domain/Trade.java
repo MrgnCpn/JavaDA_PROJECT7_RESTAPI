@@ -73,6 +73,13 @@ public class Trade {
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private LocalDate revisionDate;
 
+    public Trade() {}
+
+    public Trade(@NotNull(message = "Account is mandatory") @Size(max = 30) String account, @NotNull(message = "Type is mandatory") @Size(max = 30) String type) {
+        this.account = account;
+        this.type = type;
+    }
+
     public Integer getTradeId() {
         return tradeId;
     }

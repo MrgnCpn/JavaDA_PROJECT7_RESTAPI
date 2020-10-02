@@ -31,6 +31,15 @@ public class User {
     @Size(max = 125)
     private String role;
 
+    public User() {}
+
+    public User(@NotBlank(message = "Username is mandatory") @Size(max = 125) String username, @NotBlank(message = "Password is mandatory") @Size(max = 125) String password, @NotBlank(message = "FullName is mandatory") @Size(max = 125) String fullname, @NotBlank(message = "Role is mandatory") @Size(max = 125) String role) {
+        this.username = username;
+        this.password = password;
+        this.fullname = fullname;
+        this.role = role;
+    }
+
     public Integer getId() {
         return id;
     }

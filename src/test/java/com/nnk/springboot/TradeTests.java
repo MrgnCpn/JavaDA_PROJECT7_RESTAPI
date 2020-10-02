@@ -21,7 +21,6 @@ public class TradeTests {
 
 	@Test
 	public void tradeTest() {
-		/*
 		Trade trade = new Trade("Trade Account", "Type");
 
 		// Save
@@ -43,7 +42,5 @@ public class TradeTests {
 		tradeRepository.delete(trade);
 		Optional<Trade> tradeList = tradeRepository.findById(id);
 		Assert.assertFalse(tradeList.isPresent());
-
-		 */
 	}
 }

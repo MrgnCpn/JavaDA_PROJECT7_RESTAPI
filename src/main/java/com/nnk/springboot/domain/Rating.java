@@ -25,6 +25,15 @@ public class Rating {
 
     private Integer orderNumber;
 
+    public Rating() {}
+
+    public Rating(@Size(max = 125) String moodysRating, @Size(max = 125) String sandRating, @Size(max = 125) String fitchRating, Integer orderNumber) {
+        this.moodysRating = moodysRating;
+        this.sandRating = sandRating;
+        this.fitchRating = fitchRating;
+        this.orderNumber = orderNumber;
+    }
+
     public Integer getId() {
         return id;
     }

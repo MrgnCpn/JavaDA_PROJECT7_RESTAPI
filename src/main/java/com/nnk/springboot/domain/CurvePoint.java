@@ -28,6 +28,14 @@ public class CurvePoint {
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private LocalDate creationDate;
 
+    public CurvePoint() {}
+
+    public CurvePoint(Integer curveId, Double term, Double value) {
+        this.curveId = curveId;
+        this.term = term;
+        this.value = value;
+    }
+
     public Integer getId() {
         return id;
     }

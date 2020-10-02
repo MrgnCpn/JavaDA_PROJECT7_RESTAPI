@@ -76,6 +76,14 @@ public class BidList {
     @DateTimeFormat(pattern = "MM/dd/yyyy")
     private LocalDate revisionDate;
 
+    public BidList() {}
+
+    public BidList(@NotNull(message = "Account is mandatory") @Size(max = 30) String account, @NotNull(message = "Type is mandatory") @Size(max = 30) String type, Double bidQuantity) {
+        this.account = account;
+        this.type = type;
+        this.bidQuantity = bidQuantity;
+    }
+
     public Integer getBidListId() {
         return bidListId;
     }
