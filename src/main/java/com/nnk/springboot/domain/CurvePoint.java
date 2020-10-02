@@ -7,7 +7,7 @@ import java.sql.Timestamp;
 
 
 @Entity
-@Table(name = "curvePoint")
+@Table(name = "curvepoint")
 public class CurvePoint {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -15,7 +15,7 @@ public class CurvePoint {
     @Max(9999)
     private Integer id;
 
-    private Integer CurveId;
+    private Integer curveId;
     private Timestamp asOfDate;
     private Double term;
     private Double value;
@@ -30,11 +30,11 @@ public class CurvePoint {
     }
 
     public Integer getCurveId() {
-        return CurveId;
+        return curveId;
     }
 
     public void setCurveId(Integer curveId) {
-        CurveId = curveId;
+        curveId = curveId;
     }
 
     public Timestamp getAsOfDate() {

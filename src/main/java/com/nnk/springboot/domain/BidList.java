@@ -8,7 +8,7 @@ import java.sql.Date;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "bidList")
+@Table(name = "bidlist")
 public class BidList {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

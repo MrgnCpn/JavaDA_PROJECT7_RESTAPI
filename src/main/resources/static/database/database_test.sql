@@ -60,9 +60,9 @@ DROP DATABASE IF EXISTS poseidon_test_oc_mc;
         PRIMARY KEY (TradeId)
     );
 
-    CREATE TABLE curvePoint (
+    CREATE TABLE curvepoint (
         id tinyint(4) NOT NULL AUTO_INCREMENT,
-        CurveId tinyint,
+        curveId tinyint,
         asOfDate TIMESTAMP,
         term DOUBLE,
         value DOUBLE,
