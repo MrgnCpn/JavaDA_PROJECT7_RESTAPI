@@ -49,7 +49,7 @@ public class CurvePoint {
     }
 
     public void setCurveId(Integer curveId) {
-        curveId = curveId;
+        this.curveId = curveId;
     }
 
     public LocalDate getAsOfDate() {
