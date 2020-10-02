@@ -1,11 +1,13 @@
 package com.nnk.springboot.domain;
 
-import org.springframework.beans.factory.annotation.Required;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import javax.validation.constraints.*;
-import java.sql.Date;
-import java.sql.Timestamp;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.time.LocalDate;
+
 
 @Entity
 @Table(name = "bidlist")
@@ -16,11 +18,11 @@ public class BidList {
     @Max(9999)
     private Integer bidListId;
 
-    @NotNull
+    @NotNull(message = "Account is mandatory")
     @Size(max = 30)
     private String account;
 
-    @NotNull
+    @NotNull(message = "Type is mandatory")
     @Size(max = 30)
     private String type;
 
@@ -48,9 +50,6 @@ public class BidList {
     @Size(max = 125)
     private String revisionName;
 
-    @NotBlank
-    private Timestamp revisionDate;
-
     @Size(max = 125)
     private String dealName;
 
@@ -67,8 +66,15 @@ public class BidList {
     private Double askQuantity;
     private Double bid;
     private Double ask;
-    private Timestamp bidListDate;
-    private Timestamp creationDate;
+
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private LocalDate bidListDate;
+
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private LocalDate creationDate;
+
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private LocalDate revisionDate;
 
     public Integer getBidListId() {
         return bidListId;
@@ -158,11 +164,11 @@ public class BidList {
         this.revisionName = revisionName;
     }
 
-    public Timestamp getRevisionDate() {
+    public LocalDate getRevisionDate() {
         return revisionDate;
     }
 
-    public void setRevisionDate(Timestamp revisionDate) {
+    public void setRevisionDate(LocalDate revisionDate) {
         this.revisionDate = revisionDate;
     }
 
@@ -230,19 +236,19 @@ public class BidList {
         this.ask = ask;
     }
 
-    public Timestamp getBidListDate() {
+    public LocalDate getBidListDate() {
         return bidListDate;
     }
 
-    public void setBidListDate(Timestamp bidListDate) {
+    public void setBidListDate(LocalDate bidListDate) {
         this.bidListDate = bidListDate;
     }
 
-    public Timestamp getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Timestamp creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }

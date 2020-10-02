@@ -1,9 +1,11 @@
 package com.nnk.springboot.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
-import java.sql.Timestamp;
+import java.time.LocalDate;
 
 
 @Entity
@@ -16,10 +18,15 @@ public class CurvePoint {
     private Integer id;
 
     private Integer curveId;
-    private Timestamp asOfDate;
+
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private LocalDate asOfDate;
+
     private Double term;
     private Double value;
-    private Timestamp creationDate;
+
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
+    private LocalDate creationDate;
 
     public Integer getId() {
         return id;
@@ -37,11 +44,11 @@ public class CurvePoint {
         curveId = curveId;
     }
 
-    public Timestamp getAsOfDate() {
+    public LocalDate getAsOfDate() {
         return asOfDate;
     }
 
-    public void setAsOfDate(Timestamp asOfDate) {
+    public void setAsOfDate(LocalDate asOfDate) {
         this.asOfDate = asOfDate;
     }
 
@@ -61,11 +68,11 @@ public class CurvePoint {
         this.value = value;
     }
 
-    public Timestamp getCreationDate() {
+    public LocalDate getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(Timestamp creationDate) {
+    public void setCreationDate(LocalDate creationDate) {
         this.creationDate = creationDate;
     }
 }

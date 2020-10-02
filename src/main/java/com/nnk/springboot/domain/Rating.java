@@ -18,7 +18,7 @@ public class Rating {
     private String moodysRating;
 
     @Size(max = 125)
-    private String sandPRating;
+    private String sandRating;
 
     @Size(max = 125)
     private String fitchRating;
@@ -41,12 +41,12 @@ public class Rating {
         this.moodysRating = moodysRating;
     }
 
-    public String getSandPRating() {
-        return sandPRating;
+    public String getSandRating() {
+        return sandRating;
     }
 
-    public void setSandPRating(String sandPRating) {
-        this.sandPRating = sandPRating;
+    public void setSandRating(String sandRating) {
+        this.sandRating = sandRating;
     }
 
     public String getFitchRating() {
