@@ -94,13 +94,13 @@ DROP DATABASE IF EXISTS poseidon_prod_oc_mc;
       username VARCHAR(125),
       password VARCHAR(125),
       fullname VARCHAR(125),
-      role VARCHAR(125),
+      role VARCHAR(125)
       PRIMARY KEY (id)
     );
 
     LOCK TABLES users WRITE;
 
-    insert into users(fullname, username, password, role) values('Administrator', 'admin', 'password', 'ADMIN');
-    insert into users(fullname, username, password, role) values('User', 'user', 'password', 'USER');
+    insert into users(fullname, username, password, role) values('Administrator', 'admin', '$2a$10$.NyqixZc.5Hm2JMXfUP/NuS31iapJCj87QXwu111qlJ.pvFJVC.8S', 'ADMIN');
+    insert into users(fullname, username, password, role) values('User', 'user', '$2a$10$KWuAijcGolOVxqX1Zy33Pu57TLASW4K.oqQjagRRlr5SxF/gTIkXW', 'USER');
 
     UNLOCK TABLES;
