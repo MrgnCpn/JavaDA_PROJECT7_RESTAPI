@@ -13,7 +13,6 @@ import java.time.LocalDate;
 public class CurvePoint {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @NotNull
     @Max(9999)
     private Integer id;
 

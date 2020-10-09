@@ -2,7 +2,6 @@ package com.nnk.springboot.domain;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -10,7 +9,6 @@ import javax.validation.constraints.Size;
 public class Rating {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @NotNull
     @Max(9999)
     private Integer id;
 

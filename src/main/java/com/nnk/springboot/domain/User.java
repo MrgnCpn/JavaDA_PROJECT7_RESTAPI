@@ -12,7 +12,6 @@ public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Max(9999)
-    @NotNull
     private Integer id;
 
     @NotBlank(message = "Username is mandatory")

@@ -14,7 +14,6 @@ import java.time.LocalDate;
 public class Trade {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @NotNull
     @Max(9999)
     private Integer tradeId;
 

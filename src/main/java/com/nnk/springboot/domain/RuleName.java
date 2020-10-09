@@ -13,7 +13,6 @@ public class RuleName {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     @Max(9999)
-    @NotNull
     private Integer id;
 
     @Size(max = 125)

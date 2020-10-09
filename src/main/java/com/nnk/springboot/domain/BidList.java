@@ -14,7 +14,6 @@ import java.time.LocalDate;
 public class BidList {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @NotNull
     @Max(9999)
     private Integer bidListId;
 

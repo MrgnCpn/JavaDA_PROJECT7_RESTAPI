@@ -39,7 +39,7 @@
 				<div class="form-group">
 					<label for="orderNumber" class="col-sm-2 control-label">Order Number</label>
 					<div class="col-12">
-						<input type="text" th:field="*{orderNumber}" id="orderNumber" class="col-12">
+						<input type="text" th:field="*{orderNumber}" id="orderNumber" placeholder="0" class="col-12">
 						<p class="text-danger" th:if="${#fields.hasErrors('orderNumber')}" th:errors="*{orderNumber}"></p>
 					</div>
 				</div>
