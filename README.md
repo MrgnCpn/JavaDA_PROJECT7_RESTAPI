@@ -18,7 +18,7 @@ Trading app for entreprise
 3. Change DB settings (host / port / user / password) in src/main/resources/static/database/application.properties
 **WARNING : Don't change database name if you don't change databse name in your database software**
 6. Run `mvn clean site` to generate tests, coverage, and report site
-**WARNING : if you run test without import databases, tests will fail**
+**WARNING : if you run test without import database, tests will fail**
 7. Change server port in /src/main/resources/application.properties (Default : `server.port=9090`)
 8. Install mvn wrapper : `mvn -N io.takari:maven:wrapper` 
 9. Run app : `./mvnw spring-boot:run`
