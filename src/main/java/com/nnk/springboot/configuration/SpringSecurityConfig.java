@@ -22,13 +22,14 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-            .antMatchers("/user*").hasRole("ADMIN")
-            .antMatchers("*").hasRole("USER")
-            .anyRequest().authenticated()
+            .antMatchers("/user", "/admin", "/user/**", "/admin/**").hasAnyAuthority("ADMIN")
+            .anyRequest()
+            .authenticated()
             .and()
             .formLogin()
             .and()
-            .logout().logoutRequestMatcher(new AntPathRequestMatcher("/app-logout"));
+            .logout()
+            .logoutRequestMatcher(new AntPathRequestMatcher("/app-logout"));
     }
 
     @Autowired

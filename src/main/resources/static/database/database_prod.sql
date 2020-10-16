@@ -94,7 +94,7 @@ DROP DATABASE IF EXISTS poseidon_prod_oc_mc;
       username VARCHAR(125),
       password VARCHAR(125),
       fullname VARCHAR(125),
-      role VARCHAR(125)
+      role VARCHAR(125),
       PRIMARY KEY (id)
     );
 
